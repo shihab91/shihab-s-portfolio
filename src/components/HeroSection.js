@@ -2,6 +2,7 @@
 /* eslint-disable quotes */
 import React from "react";
 import heroImg from "../assets/images/hero.png";
+import Button from "./Button";
 import PText from "./PText";
 
 export default function HeroSection() {
@@ -16,7 +17,12 @@ export default function HeroSection() {
           <img src={heroImg} alt="" />
         </div>
         <div className="hero__info">
-          <PText/>
+          <PText>
+            I am working as a Front-end Developer for 1 year. I love to design
+            and make new web experience for the people. I am a self-motivated
+            and a team player.
+          </PText>
+          <Button btnLink="/projects" btnText="see my works" />
         </div>
       </div>
     </div>
