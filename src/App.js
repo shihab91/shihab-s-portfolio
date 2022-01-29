@@ -14,9 +14,9 @@ export default function App() {
       <Router>
         <NavMenu />
         <Switch>
-          <Route exact path="/">
+          {/* <Route exact path="/">
             <Home />
-          </Route>
+          </Route> */}
           <Route path="/home">
             <Home />
           </Route>
