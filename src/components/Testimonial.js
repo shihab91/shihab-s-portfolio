@@ -1,11 +1,12 @@
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
-import React from "react";
+import React, { useState } from "react";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import styled from "styled-components";
 import PText from "./PText";
 import SectionTitle from "./SectionTitle";
+import testimonials from "../assets/data/testimonials";
 
 const TestimonialSectionStyle = styled.div`
   padding: 10rem 0;
@@ -56,9 +57,46 @@ const TestimonialSectionStyle = styled.div`
       cursor: pointer;
     }
   }
+  .fade-enter {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: 250ms ease-in;
+    transition-property: opacity, transform;
+  }
+  .fade-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transition: 250ms ease-in;
+    transform: scale(0.96);
+    transition-property: opacity, transform;
+  }
 `;
 
 export default function Testimonial() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeSlide = testimonials[activeIndex];
+  const handleNext = () => {
+    if (activeIndex >= testimonials.length - 1) {
+      setActiveIndex(0);
+    } else {
+      setActiveIndex((oldIndex) => oldIndex + 1);
+    }
+  };
+  const handlePrev = () => {
+    if (activeIndex <= 0) {
+      setActiveIndex(testimonials.length - 1);
+    } else {
+      setActiveIndex((oldIndex) => oldIndex - 1);
+    }
+  };
   return (
     <TestimonialSectionStyle>
       <div className="container">
@@ -68,25 +106,36 @@ export default function Testimonial() {
         />
         <div className="testimonial__wrapper">
           <SwitchTransition>
-            <CSSTransition>
+            <CSSTransition key={activeSlide.id} timeout={300} classNames="fade">
               <div className="testimonial__info">
                 <div className="testimonial__description">
-                  <PText>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quos eaque saepe dolore nam inventore. Illum itaque
-                  </PText>
+                  <PText>{activeSlide.desc}</PText>
                 </div>
-                <h2 className="testimonial__name">Shihab Shumon</h2>
-                <p className="testimonial__title">CEO, Shihab Shumon</p>
+                <h2 className="testimonial__name">{activeSlide.name} </h2>
+                <p className="testimonial__title">
+                  {activeSlide.title}, <br /> {activeSlide.org}{" "}
+                </p>
               </div>
             </CSSTransition>
           </SwitchTransition>
         </div>
         <div className="arrows">
-          <div className="prev">
+          <div
+            className="prev"
+            onClick={handlePrev}
+            role="button"
+            tabIndex={0}
+            onKeyDown={handlePrev}
+          >
             <MdArrowBack />
           </div>
-          <div className="next">
+          <div
+            className="next"
+            onClick={handleNext}
+            role="button"
+            tabIndex={0}
+            onKeyDown={handleNext}
+          >
             <MdArrowForward />
           </div>
         </div>
