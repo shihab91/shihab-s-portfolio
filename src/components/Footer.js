@@ -24,6 +24,34 @@ const FooterStyle = styled.div`
     font-size: 3.5rem;
     margin-bottom: 1rem;
   }
+  .copyright {
+    background-color: var(--dark-bg);
+    text-align: left;
+    padding: 1rem 0;
+    margin-top: 5rem;
+    .para {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 0rem;
+      & > div {
+        margin-top: 5rem;
+      }
+    }
+    .footer__col1 .para {
+      max-width: 100%;
+    }
+    .copyright {
+      .container {
+        div {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 `;
 
 export default function Footer() {
@@ -44,32 +72,74 @@ export default function Footer() {
             links={[
               {
                 title: "Home",
-                path: "/home",
-                type: "link",
+                path: "/",
+                type: "Link",
               },
               {
+                type: "Link",
                 title: "About",
                 path: "/about",
-                type: "link",
               },
               {
+                type: "Link",
                 title: "Projects",
                 path: "/projects",
-                type: "link",
               },
               {
+                type: "Link",
                 title: "Contact",
                 path: "/contact",
-                type: "link",
               },
             ]}
           />
         </div>
         <div className="footer__col3">
-          <FooterCol />
+          <FooterCol
+            heading="Contact Info"
+            links={[
+              {
+                title: "+8801914608395",
+                path: "tel:+8801914608395",
+              },
+              {
+                title: "shumonshihab62@gmail.com",
+                path: "mailto:shumonshihab62@gmail.com",
+              },
+              {
+                title: "Gazipur, Dhaka, Bangladesh",
+                path:
+                  "https://www.google.com/maps/@24.0371764,90.289241,1130m/data=!3m1!1e3",
+              },
+            ]}
+          />
         </div>
         <div className="footer__col4">
-          <FooterCol />
+          <FooterCol
+            heading="Social Links"
+            links={[
+              {
+                title: "Facebook",
+                path: "https://www.facebook.com/mdshihab.shumon.3",
+              },
+              {
+                title: "GitHub",
+                path: "https://github.com/shihab91/",
+              },
+              {
+                title: "LinkedIn",
+                path: "https://www.linkedin.com/in/shihab-shumon/",
+              },
+              {
+                title: "LinkedIn",
+                path: "https://www.linkedin.com/in/shihab-shumon/",
+              },
+            ]}
+          />
+        </div>
+      </div>
+      <div className="copyright">
+        <div className="container">
+          <PText>© 2022 - Shihab Shumon | All rights reserved</PText>
         </div>
       </div>
     </FooterStyle>

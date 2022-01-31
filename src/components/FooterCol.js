@@ -22,12 +22,12 @@ export default function FooterCol({
   heading = "col heading",
   links = [
     {
-      type: "link",
+      type: "Link",
       title: "Home",
       path: "/home",
     },
     {
-      type: "link",
+      type: "Link",
       title: "About",
       path: "/about",
     },
@@ -39,8 +39,8 @@ export default function FooterCol({
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            {link.type === "link" ? (
-              <Link to={ProjectItem.path}>{link.title} </Link>
+            {link.type === "Link" ? (
+              <Link to={link.path}>{link.title} </Link>
             ) : (
               <a href={link.path} target="_blank" rel="noreferrer">
                 {link.title}{" "}

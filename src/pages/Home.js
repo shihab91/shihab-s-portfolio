@@ -3,7 +3,6 @@
 import React from "react";
 import About from "../components/About";
 import ContactBanner from "../components/ContactBanner";
-import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import ProjectSection from "../components/ProjectSection";
 import Services from "../components/Services";
@@ -18,7 +17,6 @@ export default function Home() {
       <ProjectSection />
       <Testimonial />
       <ContactBanner />
-      <Footer />
     </>
   );
 }
