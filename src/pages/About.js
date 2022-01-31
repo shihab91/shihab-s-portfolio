@@ -5,6 +5,8 @@ import styled from "styled-components";
 import PText from "../components/PText";
 import Button from "../components/Button";
 import aboutImg from "../assets/images/about-page-img.png";
+import AboutInfoItem from "../components/AboutInfoItem";
+import ContactBanner from "../components/ContactBanner";
 
 const AboutPageStyle = styled.div`
   padding: 20rem 0 10rem 0;
@@ -41,6 +43,32 @@ const AboutPageStyle = styled.div`
   .right {
     img {
       border: 2px solid var(--grey-1);
+    }
+  }
+  .about__info__items {
+    margin-top: 15rem;
+  }
+  .about__info__item {
+    margin-bottom: 10rem;
+  }
+  .about__info__heading {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 10rem 0;
+    .top__section {
+      flex-direction: column;
+      gap: 5rem;
+    }
+    .about__subHeading {
+      font-size: 1.8rem;
+    }
+    .about__heading {
+      font-size: 2.8rem;
+    }
+    .about__info__heading {
+      font-size: 3rem;
     }
   }
 `;
@@ -80,7 +108,46 @@ export default function About() {
             <img src={aboutImg} alt="shihab shumon img" />
           </div>
         </div>
+        <div className="about__info__items">
+          <div className="about__info__item">
+            <h1 className="about__info__heading">Education</h1>
+            <AboutInfoItem
+              title="School"
+              items={["Shafipur Purbapara Model Public School"]}
+            />
+            <AboutInfoItem
+              title="College"
+              items={["Mouchak Scout School and College"]}
+            />
+          </div>
+          <div className="about__info__item">
+            <h1 className="about__info__heading">My Skills</h1>
+            <AboutInfoItem
+              title="FrontEnd"
+              items={[
+                "JavaScript",
+                "ReactJS",
+                "Bootstrap",
+                "Material UI",
+                "TailwindCSS",
+              ]}
+            />
+            <AboutInfoItem
+              title="BackEnd"
+              items={["NodeJS", "ExpressJS", "MongoDB"]}
+            />
+            <AboutInfoItem title="Tools" items={["vsCode", "GitHub"]} />
+          </div>
+          <div className="about__info__item">
+            <h1 className="about__info__heading">Experiences</h1>
+            <AboutInfoItem
+              title="2021-2022"
+              items={["Junior React Developer"]}
+            />
+          </div>
+        </div>
       </div>
+      <ContactBanner />
     </AboutPageStyle>
   );
 }
