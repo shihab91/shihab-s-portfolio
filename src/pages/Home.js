@@ -3,6 +3,7 @@
 import React from "react";
 import About from "../components/About";
 import HeroSection from "../components/HeroSection";
+import ProjectSection from "../components/ProjectSection";
 import Services from "../components/Services";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <About />
       <Services />
+      <ProjectSection />
     </>
   );
 }
