@@ -20,6 +20,10 @@ const FooterStyle = styled.div`
   .footer__col4 {
     flex: 1;
   }
+  .footer__col1__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export default function Footer() {
@@ -35,7 +39,31 @@ export default function Footer() {
           </PText>
         </div>
         <div className="footer__col2">
-          <FooterCol />
+          <FooterCol
+            heading="Important Links"
+            links={[
+              {
+                title: "Home",
+                path: "/home",
+                type: "link",
+              },
+              {
+                title: "About",
+                path: "/about",
+                type: "link",
+              },
+              {
+                title: "Projects",
+                path: "/projects",
+                type: "link",
+              },
+              {
+                title: "Contact",
+                path: "/contact",
+                type: "link",
+              },
+            ]}
+          />
         </div>
         <div className="footer__col3">
           <FooterCol />
