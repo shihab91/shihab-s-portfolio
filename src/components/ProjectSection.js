@@ -8,11 +8,15 @@ import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 import projects from "../assets/data/projects";
 import ProjectItem from "./ProjectItem";
+import img from "../assets/images/image3.svg";
 
 SwiperCore.use([Navigation]);
 
 const ProjectSectionStyle = styled.div`
   padding: 10rem 0;
+  background: url(${img}) no-repeat;
+  background-position: 110% 110%;
+  background-size: 30%;
   .projects__all__item {
     display: flex;
     gap: 3rem;
@@ -44,6 +48,7 @@ const ProjectSectionStyle = styled.div`
     font-size: 2rem;
   }
   @media only screen and (max-width: 768px) {
+    background: none;
     .projects__all__item {
       flex-direction: column;
       max-width: 400px;

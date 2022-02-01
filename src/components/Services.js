@@ -5,6 +5,9 @@ import { MdCode, MdDesktopMac, MdPhonelinkSetup } from "react-icons/md";
 import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 import ServicesSectionItem from "./ServicesSectionItem";
+import uiux from "../assets/images/ui-ux.svg";
+import webDesign from "../assets/images/web-design.svg";
+import webDev from "../assets/images/web-dev.svg";
 
 const ServiceSectionStyle = styled.div`
   padding: 10rem 0;
@@ -31,17 +34,17 @@ export default function Services() {
         <SectionTitle heading="Services" subHeading="what i will do for you" />
         <div className="services__all__items">
           <ServicesSectionItem
-            icon={<MdDesktopMac />}
+            img={uiux}
             title="Web Design"
             description="I create websites that will bring value to your business. Here you can expect your dream website to built."
           />
           <ServicesSectionItem
-            icon={<MdCode />}
+            img={webDesign}
             title="Web Development"
             description="I also develop the websites. I create high performance websites blazing fast speed"
           />
           <ServicesSectionItem
-            icon={<MdPhonelinkSetup />}
+            img={webDev}
             title="Responsive Design"
             description="I create responsive websites that will look great on any device. I can also make your website mobile friendly."
           />

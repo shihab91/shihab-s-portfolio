@@ -33,6 +33,11 @@ const FooterStyle = styled.div`
       margin-left: 0;
     }
   }
+  .para {
+    p {
+      text-align: justify;
+    }
+  }
   @media only screen and (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -61,7 +66,7 @@ export default function Footer() {
         <div className="footer__col1">
           <h1 className="footer__col1__title">Shihab Shumon</h1>
           <PText>
-            I am a front-end web developer from Dhaka , Bangladesh. I create
+            I am a front-end web developer from Dhaka,Bangladesh. I create
             professional websites. I love art and always try to show unique
             views to the audience through my website.
           </PText>

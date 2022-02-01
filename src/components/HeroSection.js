@@ -8,8 +8,14 @@ import PText from "./PText";
 import heroImg from "../assets/images/hero.png";
 import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
+// import bgImg from "../assets/images/image.svg";
+import green from "../assets/images/green2.png";
+import blue from "../assets/images/purple.png";
 
 const HeroStyles = styled.div`
+  background: url(${blue}) no-repeat;
+  background-position: 10% -20%;
+  background-size: 30%;
   .hero {
     height: 100vh;
     min-height: 1000px;
@@ -19,6 +25,9 @@ const HeroStyles = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    background: url(${green}) no-repeat;
+    background-position: 80% 110%;
+    background-size: 30%;
   }
   .hero__heading {
     font-size: 2rem;
@@ -95,6 +104,7 @@ const HeroStyles = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    background: none;
     .hero {
       min-height: 750px;
     }

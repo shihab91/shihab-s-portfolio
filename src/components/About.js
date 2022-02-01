@@ -7,9 +7,13 @@ import Button from "./Button";
 import PText from "./PText";
 import SectionTitle from "./SectionTitle";
 import aboutImg from "../assets/images/about-sec-img.png";
+import blue from "../assets/images/purple.png";
 
 const AboutSectionStyle = styled.div`
   padding: 10rem 0;
+  background: url(${blue}) no-repeat;
+  background-position: 0% -20%;
+  background-size: 30%;
   .container {
     display: flex;
     align-items: center;
@@ -43,6 +47,7 @@ const AboutSectionStyle = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    background: none;
     .container {
       flex-direction: column;
       text-align: center;

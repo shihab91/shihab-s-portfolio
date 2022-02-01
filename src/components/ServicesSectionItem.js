@@ -7,8 +7,8 @@ import PText from "./PText";
 
 const ItemStyle = styled.div`
   text-align: center;
-  .services__section__icon svg {
-    width: 3rem;
+  .services__section__icon img {
+    width: 5rem;
   }
   .services__item__title {
     font-size: 2.5rem;
@@ -19,13 +19,15 @@ const ItemStyle = styled.div`
   }
 `;
 export default function ServicesSectionItem({
-  icon = <MdDesktopMac />,
+  img = <MdDesktopMac />,
   title = "Web Design",
   description = "We create websites that will bring value to your business. Here you can expect your dream website to built.",
 }) {
   return (
     <ItemStyle>
-      <div className="services__section__icon">{icon}</div>
+      <div className="services__section__icon">
+        <img src={img} alt="" />
+      </div>
       <div className="services__item__title">{title} </div>
       <PText>{description} </PText>
     </ItemStyle>
