@@ -1,10 +1,9 @@
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavMenu from "./components/NavMenu";
-// import ScrollToTop from "./components/ScrollToTop";
 import SmoothScrollBar from "./components/SmoothScrollBar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,25 +16,14 @@ export default function App() {
       <Router>
         <NavMenu />
         <SmoothScrollBar>
-        {/* <ScrollToTop /> */}
-          <Switch>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-        <Footer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          <Footer />
         </SmoothScrollBar>
       </Router>
     </>

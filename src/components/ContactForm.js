@@ -31,8 +31,8 @@ const ContactFormStyle = styled.div`
     resize: vertical;
   }
   button[type="submit"] {
-    background-color: var(--grey-1);
-    color: var(--black);
+    background-image: var(--deep-blue);
+    color: var(--white);
     font-size: 2rem;
     display: inline-block;
     outline: none;

@@ -68,6 +68,9 @@ const HeroStyles = styled.div`
   }
   .hero__scroll__down {
     right: 50px;
+    img {
+      max-height: 70px;
+    }
   }
   .hero__social__indicator,
   .hero__scroll__down {
@@ -85,11 +88,7 @@ const HeroStyles = styled.div`
       object-fit: contain;
     }
   }
-  .hero__scroll__down {
-    img {
-      max-height: 70px;
-    }
-  }
+
   .hero__social__text {
     ul {
       li {
@@ -113,7 +112,7 @@ const HeroStyles = styled.div`
     }
     .hero__heading {
       font-size: 1.4rem;
-      margin-bottom: -3rem;
+      margin-bottom: 1rem;
       .hero__name {
         font-size: 3.8rem;
       }
@@ -125,7 +124,7 @@ const HeroStyles = styled.div`
       margin-top: 3rem;
     }
     .hero__social {
-      left: 0px;
+      left: 10px;
       bottom: -15%;
       width: 20px;
       .hero__social__indicator {
@@ -150,7 +149,7 @@ const HeroStyles = styled.div`
       }
     }
     .hero__scroll__down {
-      right: 0;
+      right: 10px;
       width: 20px;
       gap: 1rem;
       p {
@@ -167,7 +166,7 @@ export default function HeroSection() {
         <div className="container">
           <h1 className="hero__heading">
             <span>Hello, This is</span>
-            <span className="hero__name">Shihab Shumon</span>
+            <span className="hero__name">MD Shihab Shumon</span>
           </h1>
           <div className="hero__img">
             <img src={heroImg} alt="" />
