@@ -11,6 +11,12 @@ const ColStyle = styled.div`
   }
   li {
     margin-bottom: 1rem;
+    transition: 0.4s ease-in-out background;
+    &:hover {
+      background: var(--deep-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
   a {
     font-size: 1.8rem;

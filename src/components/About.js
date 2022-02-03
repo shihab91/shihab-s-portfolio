@@ -46,15 +46,20 @@ const AboutSectionStyle = styled.div`
       flex: 3;
     }
   }
+  /* 
+  !media queries for mobile or tablet devices
+  */
   @media only screen and (max-width: 768px) {
     background: none;
     .container {
       flex-direction: column;
       text-align: center;
     }
-    .about__section__left,
-    .about__section__right {
+    .about__section__left {
       width: 100%;
+    }
+    .about__section__right {
+      width: 80%;
     }
     .about__section__right {
       margin-top: 3rem;

@@ -109,6 +109,7 @@ const HeroStyles = styled.div`
     background: none;
     .hero {
       min-height: 750px;
+      background: none;
     }
     .hero__heading {
       font-size: 1.4rem;

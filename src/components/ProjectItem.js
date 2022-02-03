@@ -13,8 +13,10 @@ const ProjectItemStyle = styled.div`
     overflow: hidden;
     display: inline-block;
     border: 3px solid var(--gray-2);
+    object-fit: contain;
     img {
-      height: 100%;
+      /* height: 100%; */
+      width: 100%;
     }
   }
   .project__item__info {

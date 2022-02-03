@@ -31,12 +31,19 @@ export default function Button({
   btnLink = "Test",
   btnText = "Test",
   outlined = false,
+  type = "Link",
 }) {
   return (
     <ButtonStyle outlined={outlined} className="button__wrapper">
-      <Link className="button" to={btnLink}>
-        {btnText}
-      </Link>
+      {type === "Link" ? (
+        <Link className="button" to={btnLink}>
+          {btnText}
+        </Link>
+      ) : (
+        <a className="button" href={btnLink} target="_blank" rel="noreferrer">
+          {btnText}
+        </a>
+      )}
     </ButtonStyle>
   );
 }

@@ -102,7 +102,11 @@ export default function About() {
                 <br /> <br />
               </PText>
             </div>
-            <Button btnText="Resume" btnLink="#" />
+            <Button
+              type="a"
+              btnText="Resume"
+              btnLink="https://drive.google.com/file/d/1lY81fEb5FlwPr6dNRQSGp9An4DHNS_Ch/view?usp=sharing"
+            />
           </div>
           <div className="right">
             <img src={aboutImg} alt="shihab shumon img" />

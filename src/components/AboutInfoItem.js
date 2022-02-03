@@ -39,6 +39,9 @@ const AboutItemStyle = styled.div`
     }
   }
 `;
+const a = "shiahb";
+console.log("🚀 ~ file: AboutInfoItem.js ~ line 43 ~ a", a);
+
 export default function AboutInfoItem({
   title = "this is title",
   items = ["HTML", "CSS", "JS"],
