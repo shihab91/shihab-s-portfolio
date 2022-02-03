@@ -3,12 +3,13 @@
 /* eslint-disable quotes */
 import React from "react";
 import styled from "styled-components";
+import { MdOutlineFacebook } from "react-icons/md";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Button from "./Button";
 import PText from "./PText";
-import heroImg from "../assets/images/hero.png";
+import heroImg from "../assets/images/hero.jpeg";
 import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
-// import bgImg from "../assets/images/image.svg";
 import green from "../assets/images/green2.png";
 import blue from "../assets/images/purple.png";
 
@@ -31,7 +32,7 @@ const HeroStyles = styled.div`
   }
   .hero__heading {
     font-size: 2rem;
-    margin-bottom: -4rem;
+    margin-top: 10rem;
     position: relative;
     span {
       display: inline-block;
@@ -44,14 +45,14 @@ const HeroStyles = styled.div`
     }
   }
   .hero__img {
-    max-width: 900px;
+    max-width: 800px;
     width: 100%;
-    height: 600px;
+    height: 550px;
     margin: 0 auto;
     border: 2px solid var(--grey-1);
   }
   .hero__info {
-    margin-top: -18rem;
+    margin-top: 3rem;
   }
   .hero__social,
   .hero__scroll__down {
@@ -96,10 +97,12 @@ const HeroStyles = styled.div`
       }
       a {
         display: inline-block;
-        font-size: 1.6rem;
         transform: rotate(-90deg);
         letter-spacing: 5px;
         margin-bottom: 2rem;
+        svg {
+          width: 2.5rem;
+        }
       }
     }
   }
@@ -190,7 +193,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Fb
+                    <MdOutlineFacebook />
                   </a>
                 </li>
                 <li>
@@ -199,7 +202,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    GT
+                    <FaGithub />
                   </a>
                 </li>
                 <li>
@@ -208,7 +211,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    LI
+                    <FaLinkedin />
                   </a>
                 </li>
                 <li>
@@ -217,7 +220,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    IN
+                    <FaInstagram />
                   </a>
                 </li>
               </ul>

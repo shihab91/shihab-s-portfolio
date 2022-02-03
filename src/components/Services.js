@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
 import React from "react";
-import { MdCode, MdDesktopMac, MdPhonelinkSetup } from "react-icons/md";
 import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 import ServicesSectionItem from "./ServicesSectionItem";

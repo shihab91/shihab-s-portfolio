@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from "react";
@@ -8,7 +9,7 @@ import SectionTitle from "../components/SectionTitle";
 import projectsData from "../assets/data/projects";
 
 const ProjectStyle = styled.div`
-  padding: 10rem 0;
+  padding: 15rem 0;
   .projects__all__items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -64,6 +65,7 @@ export default function Projects() {
       )
     );
   }, [searchText]);
+  console.log(projects);
   return (
     <ProjectStyle>
       <div className="container">
@@ -75,6 +77,7 @@ export default function Projects() {
               value={searchText}
               onChange={handleChange}
               placeholder="Project Name"
+              autoFocus="true"
             />
             <MdSearch className="search__icon" />
           </form>
@@ -86,6 +89,7 @@ export default function Projects() {
               img={project.img}
               description={project.desc}
               title={project.name}
+              link={project.link}
             />
           ))}
         </div>

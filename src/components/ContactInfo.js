@@ -15,7 +15,7 @@ const ContactInfoStyle = styled.div`
   margin-bottom: 2rem;
   .icon {
     color: var(--white);
-    background-color: var(--grey-2);
+    background-color: #262626;
     padding: 1.2rem;
     align-items: center;
     justify-content: center;

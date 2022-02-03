@@ -51,10 +51,15 @@ const TestimonialSectionStyle = styled.div`
     .prev {
       margin: 0 0.5rem;
       width: fit-content;
-      background-color: var(--deep-dark);
+      background-image: var(--deep-blue);
       padding: 0.5rem 2rem;
       border-radius: 8px;
       cursor: pointer;
+      transition: ease 0.3s background-color;
+    }
+    .next:hover,
+    .prev:hover {
+      color: #1e1750;
     }
   }
   .fade-enter {

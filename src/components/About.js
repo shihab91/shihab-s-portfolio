@@ -6,13 +6,13 @@ import styled from "styled-components";
 import Button from "./Button";
 import PText from "./PText";
 import SectionTitle from "./SectionTitle";
-import aboutImg from "../assets/images/about-sec-img.png";
-import blue from "../assets/images/purple.png";
+import aboutImg from "../assets/images/about-sec-img.svg";
+import green from "../assets/images/green2.png";
 
 const AboutSectionStyle = styled.div`
-  padding: 10rem 0;
-  background: url(${blue}) no-repeat;
-  background-position: 0% -20%;
+  padding: 15rem 0;
+  background: url(${green}) no-repeat;
+  background-position: 85% 100%;
   background-size: 30%;
   .container {
     display: flex;

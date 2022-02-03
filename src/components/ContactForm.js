@@ -52,6 +52,7 @@ export default function ContactForm() {
         action="https://formsubmit.co/dcda41d2d98f9e72c998d86e2d34f94e"
         method="POST"
       >
+        <input type="hidden" name="_captcha" value="false" />
         <div className="form__group">
           <label for="name">Your name</label>
           <input

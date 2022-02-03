@@ -9,14 +9,15 @@ import SectionTitle from "./SectionTitle";
 import projects from "../assets/data/projects";
 import ProjectItem from "./ProjectItem";
 import img from "../assets/images/image3.svg";
+import blue from "../assets/images/green2.png";
 
 SwiperCore.use([Navigation]);
 
 const ProjectSectionStyle = styled.div`
   padding: 10rem 0;
-  background: url(${img}) no-repeat;
-  background-position: 110% 110%;
-  background-size: 30%;
+  background: url(${img}) no-repeat, url(${blue}) no-repeat;
+  background-position: 110% 110%, 10% 20%;
+  background-size: 30%, 30%;
   .projects__all__item {
     display: flex;
     gap: 3rem;
@@ -31,7 +32,7 @@ const ProjectSectionStyle = styled.div`
     position: absolute;
     height: 50px;
     width: 50px;
-    background-color: var(--deep-dark);
+    background-image: var(--deep-blue);
     z-index: 10;
     right: 60px;
     left: auto;
@@ -93,6 +94,7 @@ export default function ProjectSection() {
                     title={project.name}
                     img={project.img}
                     description={project.desc}
+                    link={project.link}
                   />
                 </SwiperSlide>
               );

@@ -4,14 +4,16 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import PText from "./PText";
+import abstractImg from "../assets/images/abstract.svg";
 
 const ContactBannerStyle = styled.div`
   padding: 10rem 0;
   .contact__banner__wrapper {
-    background-color: var(--deep-dark);
     border-radius: 12px;
     padding: 5rem 0rem;
     text-align: center;
+    background: var(--deep-dark) url(${abstractImg}) no-repeat center center;
+    background-size: cover;
   }
   .contact__banner__heading {
     font-size: 4rem;

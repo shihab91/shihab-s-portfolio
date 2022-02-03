@@ -8,7 +8,7 @@ import ContactInfo from "./ContactInfo";
 import SectionTitle from "./SectionTitle";
 
 const ContactSectionStyle = styled.div`
-  padding: 10rem 0;
+  padding: 15rem 0;
   .contact__section__wrapper {
     display: flex;
     gap: 5rem;

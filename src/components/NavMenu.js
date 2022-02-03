@@ -12,7 +12,7 @@ const NavMenuStyles = styled.div`
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background-color: var(--dark-bg);
+  background-color: #0d1117;
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,9 +21,13 @@ const NavMenuStyles = styled.div`
     li {
       display: inline-block;
       border-radius: 8px;
-      transition: 0.3s ease background-color;
+      transition: 0.3s ease all;
       &:hover {
-        background-color: var(--deep-dark);
+        background-image: linear-gradient(
+          90deg,
+          rgb(77, 44, 210),
+          rgb(58, 29, 176)
+        );
       }
     }
     a {
@@ -31,11 +35,13 @@ const NavMenuStyles = styled.div`
       font-family: "RobotoMono Regular";
       padding: 1rem 2rem;
       font-size: 2rem;
-      color: var(--grey-1);
+      color: #e4ecf5;
       outline: none;
     }
     .active {
-      color: var(--white);
+      color: #e4ecf5;
+      background-image: var(--deep-blue);
+      border-radius: 8px;
     }
   }
   .mobile-menu-icon {
@@ -64,7 +70,7 @@ const NavMenuStyles = styled.div`
     .nav-items {
       --top: 1rem;
       transition: 0.3s ease transform;
-      background-color: var(--deep-dark);
+      background-image: var(--deep-blue);
       padding: 2rem;
       width: 90%;
       max-width: 300px;

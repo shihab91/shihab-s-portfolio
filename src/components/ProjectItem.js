@@ -31,6 +31,13 @@ const ProjectItemStyle = styled.div`
       margin-top: 1rem;
     }
   }
+  .project__button {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    margin: 2rem 0;
+    color: royalblue;
+  }
   @media only screen and (max-width: 768px) {
     .project__item__img {
       height: 350px;
@@ -42,7 +49,9 @@ export default function ProjectItem({
   img = projectImg,
   title = "Project Title",
   description = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores minus, dicta",
+  link,
 }) {
+  console.log(link);
   return (
     <ProjectItemStyle>
       <Link to="/projects" className="project__item__img">
@@ -53,6 +62,16 @@ export default function ProjectItem({
           <h3 className="project__item__title"> {title}</h3>
         </Link>
         <p className="project__item__description">{description}</p>
+        {link && (
+          <a
+            href={link}
+            className="project__button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Project
+          </a>
+        )}
       </div>
     </ProjectItemStyle>
   );
