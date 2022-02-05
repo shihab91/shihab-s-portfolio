@@ -45,9 +45,9 @@ const HeroStyles = styled.div`
     }
   }
   .hero__img {
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    height: 550px;
+    height: 600px;
     margin: 0 auto;
     border: 2px solid var(--grey-1);
   }

@@ -21,7 +21,6 @@ const NavMenuStyles = styled.div`
     li {
       display: inline-block;
       border-radius: 8px;
-      transition: 0.3s ease all;
       &:hover {
         background-image: linear-gradient(
           90deg,
