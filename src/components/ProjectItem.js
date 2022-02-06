@@ -1,6 +1,7 @@
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,7 +15,6 @@ const ProjectItemStyle = styled.div`
     border: 3px solid var(--gray-2);
     object-fit: contain;
     img {
-      /* height: 100%; */
       width: 100%;
     }
   }
@@ -39,6 +39,16 @@ const ProjectItemStyle = styled.div`
     margin: 2rem 0;
     color: royalblue;
   }
+  .code__link {
+    /* display: inline-block; */
+    float: right;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    svg {
+      width: 2.5rem;
+    }
+  }
   @media only screen and (max-width: 768px) {
     .project__item__img {
       height: 350px;
@@ -51,6 +61,7 @@ export default function ProjectItem({
   title = "Project Title",
   description = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores minus, dicta",
   link,
+  codeLink = "https://github.com/shihab91/",
 }) {
   console.log(link);
   return (
@@ -63,16 +74,23 @@ export default function ProjectItem({
           <h3 className="project__item__title"> {title}</h3>
         </Link>
         <p className="project__item__description">{description}</p>
-        {link && (
-          <a
-            href={link}
-            className="project__button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open Project
-          </a>
-        )}
+
+        <a
+          href={link}
+          className="project__button"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open Project
+        </a>
+        <a
+          className="code__link"
+          href={codeLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub />
+        </a>
       </div>
     </ProjectItemStyle>
   );

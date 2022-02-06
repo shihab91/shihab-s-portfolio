@@ -171,7 +171,7 @@ const HeroStyles = styled.div`
       }
     }
   }
-
+  //! media queries starts from here
   @media only screen and (max-width: 768px) {
     background: none;
     .hero {
