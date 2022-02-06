@@ -3,7 +3,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import projectImg from "../assets/images/projectImg.png";
 
 const ProjectItemStyle = styled.div`
   .project__item__img {
@@ -48,7 +47,7 @@ const ProjectItemStyle = styled.div`
 `;
 
 export default function ProjectItem({
-  img = projectImg,
+  img,
   title = "Project Title",
   description = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores minus, dicta",
   link,

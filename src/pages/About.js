@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import PText from "../components/PText";
 import Button from "../components/Button";
-import aboutImg from "../assets/images/about-page-img.png";
+import aboutImg from "../assets/images/about-img.jpeg";
 import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
 

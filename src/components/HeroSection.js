@@ -38,10 +38,76 @@ const HeroStyles = styled.div`
       display: inline-block;
       width: 100%;
     }
+    /* .hero__name {
+
+      /* background: linear-gradient(
+        90deg,
+        rgba(255, 0, 136, 1) 33%,
+        rgba(0, 212, 255, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+
+    } */
+
     .hero__name {
-      font-size: 7rem;
+      font-size: 8rem;
       font-family: "Montserrat SemiBold";
-      color: var(--white);
+      color: transparent;
+      background: conic-gradient(
+        rgba(0, 212, 255, 1) 12%,
+        #baabda 12%,
+        #2ecc71 33%,
+        #2ecce1 12%,
+        #bacb5a 13%,
+        #e7fbbe 33%,
+        #e7fbbe 55%,
+        #ffcbcb 55%,
+        #ffcbcb 70%,
+        rgba(255, 0, 136, 1) 70%,
+        #b5deff 87%,
+        #f7d1ba 87%,
+        #f7e1ba 87%
+      );
+      background-size: 50%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: expand-rev 0.5s ease forwards;
+      cursor: pointer;
+    }
+
+    .hero__name:hover {
+      animation: expand 0.5s ease forwards;
+    }
+
+    @keyframes expand {
+      0% {
+        background-size: 50%;
+        background-position: 0 0;
+      }
+      20% {
+        background-size: 55%;
+        background-position: 0 1em;
+      }
+      100% {
+        background-size: 325%;
+        background-position: -10em -4em;
+      }
+    }
+
+    @keyframes expand-rev {
+      0% {
+        background-size: 325%;
+        background-position: -10em -4em;
+      }
+      20% {
+        background-size: 55%;
+        background-position: 0 1em;
+      }
+      100% {
+        background-size: 50%;
+        background-position: 0 0;
+      }
     }
   }
   .hero__img {
@@ -105,6 +171,7 @@ const HeroStyles = styled.div`
       }
     }
   }
+
   @media only screen and (max-width: 768px) {
     background: none;
     .hero {
