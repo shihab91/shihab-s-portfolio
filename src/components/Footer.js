@@ -135,8 +135,8 @@ export default function Footer() {
                 path: "https://www.linkedin.com/in/shihab-shumon/",
               },
               {
-                title: "LinkedIn",
-                path: "https://www.linkedin.com/in/shihab-shumon/",
+                title: "Twitter",
+                path: "https://twitter.com/shumon_shihab",
               },
             ]}
           />

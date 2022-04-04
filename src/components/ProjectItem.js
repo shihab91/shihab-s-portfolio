@@ -66,9 +66,14 @@ export default function ProjectItem({
   console.log(link);
   return (
     <ProjectItemStyle>
-      <Link to="/projects" className="project__item__img">
+      <a
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className="project__item__img"
+      >
         <img src={img} alt="project img" />
-      </Link>
+      </a>
       <div className="project__item__info">
         <Link to="#">
           <h3 className="project__item__title"> {title}</h3>

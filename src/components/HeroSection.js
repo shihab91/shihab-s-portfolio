@@ -1,17 +1,19 @@
+/* eslint-disable no-new */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
-import React from "react";
-import styled from "styled-components";
+import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdOutlineFacebook } from "react-icons/md";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import styled from "styled-components";
+import green from "../assets/images/green2.png";
+import heroImg from "../assets/images/hero.jpeg";
+import blue from "../assets/images/purple.png";
+import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
+import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import Button from "./Button";
 import PText from "./PText";
-import heroImg from "../assets/images/hero.jpeg";
-import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
-import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
-import green from "../assets/images/green2.png";
-import blue from "../assets/images/purple.png";
 
 const HeroStyles = styled.div`
   background: url(${blue}) no-repeat;
@@ -38,18 +40,6 @@ const HeroStyles = styled.div`
       display: inline-block;
       width: 100%;
     }
-    /* .hero__name {
-
-      /* background: linear-gradient(
-        90deg,
-        rgba(255, 0, 136, 1) 33%,
-        rgba(0, 212, 255, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
-
-    } */
-
     .hero__name {
       font-size: 8rem;
       font-family: "Montserrat SemiBold";
@@ -116,6 +106,10 @@ const HeroStyles = styled.div`
     height: 600px;
     margin: 0 auto;
     border: 2px solid var(--grey-1);
+    /* canvas {
+      width: 900px !important;
+      height: 600px !important;
+    } */
   }
   .hero__info {
     margin-top: 3rem;
@@ -126,7 +120,7 @@ const HeroStyles = styled.div`
     flex-direction: column;
     gap: 2rem;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 50px;
   }
   .hero__social {
@@ -192,7 +186,7 @@ const HeroStyles = styled.div`
       margin-top: 3rem;
     }
     .hero__social {
-      left: 10px;
+      left: 5px;
       bottom: -15%;
       width: 20px;
       .hero__social__indicator {
@@ -217,7 +211,7 @@ const HeroStyles = styled.div`
       }
     }
     .hero__scroll__down {
-      right: 10px;
+      right: 5px;
       width: 20px;
       gap: 1rem;
       p {
@@ -226,17 +220,30 @@ const HeroStyles = styled.div`
     }
   }
 `;
+const textReveal = {
+  initial: {
+    y: "200%",
+  },
+  animate: {
+    y: "0%",
+  },
+};
+const transition = {
+  duration: 0.8,
+  ease: [0.6, 0.05, -0.01, 0.9],
+};
 
 export default function HeroSection() {
+  const heroImgRef = useRef(null);
   return (
     <HeroStyles>
       <div className="hero">
         <div className="container">
           <h1 className="hero__heading">
             <span>Hello, This is</span>
-            <span className="hero__name">MD Shihab Shumon</span>
+            <motion.span className="hero__name">MD Shihab Shumon</motion.span>
           </h1>
-          <div className="hero__img">
+          <div className="hero__img" ref={heroImgRef}>
             <img src={heroImg} alt="" />
           </div>
           <div className="hero__info">

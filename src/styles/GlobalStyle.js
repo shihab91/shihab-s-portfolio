@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
         90deg,
         rgb(77, 44, 210),
         rgb(58, 29, 176)
-      );;
+      );
     --grey-2: #E4ECF5;
     --white : #EEF6FE;
     --black: black;
@@ -45,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
     width: 90%;
     margin: 0 auto;
   }
+
 /* Smooth Scroll  */
   [data-scrollbar] {
     height: 100vh;

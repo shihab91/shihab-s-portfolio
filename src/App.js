@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <Router>
-        <NavMenu />
+        <NavMenu className="shihab shumon" />
         <SmoothScrollBar>
           <Routes>
             <Route path="/" element={<Home />} />
